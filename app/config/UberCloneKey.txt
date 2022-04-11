@@ -1,0 +1,7 @@
+Serial number: 3774386c
+Valid from: Fri Mar 25 15:36:58 IST 2022 until: Tue Aug 10 15:36:58 IST 2049
+Certificate fingerprints:
+         MD5:  A4:1B:81:54:61:24:B6:6A:A0:7A:7C:06:23:51:3A:53
+         SHA1: 16:3A:EC:55:C6:88:4E:77:E5:DE:84:BA:D5:6A:83:D2:D8:EA:0D:66
+         SHA256: BE:23:B4:9F:44:2D:14:F7:25:49:BB:2A:D2:BE:57:B8:56:66:77:59:97:D6:68:45:0B:5B:57:C1:56:47:D7:60
+Signature algorithm name: SHA256withRSA
