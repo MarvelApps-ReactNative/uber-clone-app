@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
-import {Animated} from 'react-native';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
-import {bottomsheetPanResponder} from '../common';
 import {Screens} from '../config';
 import {rideInfoDataType} from '../models';
 import {RideInformation} from '../config/dummyData/RiderInformation';
+import {BottomSheetModal} from '@gorhom/bottom-sheet';
 import PickRideScreen from '../views/pickupRide';
 
 interface PickupRideViewModelprops {
@@ -17,6 +16,7 @@ type rideInfoType = {
 const PickupRideViewModel = (props: PickupRideViewModelprops) => {
   const {navigation} = props;
   const rideInfostate = useSelector((state: rideInfoType) => state.rideInfo);
+  const paymentsOption = useSelector((state: any) => state.paymentsOption);
 
   const [rideInfo, setRideInfo] = useState(RideInformation);
 
@@ -24,8 +24,18 @@ const PickupRideViewModel = (props: PickupRideViewModelprops) => {
   const paytm = 'Paytm';
   const dropdown = '6:32pm dropoff';
 
-  const viewPosition = new Animated.Value(400);
-  const panResponder = bottomsheetPanResponder(viewPosition);
+  const firstBottomModalRef = useRef<BottomSheetModal>(null);
+  const [bottomIndex, setBottomIndex] = useState<number>(0);
+  const snapPointsFirst = useMemo(() => ['40%', '96%'], []);
+
+  const handleSheetChanges = useCallback((index: number) => {
+    setBottomIndex(index);
+  }, []);
+
+  useEffect(() => {
+    firstBottomModalRef.current?.present();
+  }, []);
+
   return (
     <PickRideScreen
       {...{
@@ -34,12 +44,15 @@ const PickupRideViewModel = (props: PickupRideViewModelprops) => {
         destination,
         paytm,
         dropdown,
-        panResponder,
-        viewPosition,
         rideInfostate,
         navigateToHome: () => navigation.navigate(Screens.HomeViewModel),
         PaymentOption: () =>
           navigation.navigate(Screens.PaymentOptionsViewModel),
+        firstBottomModalRef,
+        handleSheetChanges,
+        bottomIndex,
+        snapPointsFirst,
+        paymentsOption
       }}
     />
   );
