@@ -78,3 +78,7 @@ On this screen, when users will choose a destination and add a payment option th
 <img src="https://github.com/MarvelApps-ReactNative/uber-clone-app/blob/main/screenshots/32.png" width="250" height="500" /> 
 <img src="https://github.com/MarvelApps-ReactNative/uber-clone-app/blob/main/screenshots/33.png" width="250" height="500" /> 
 </div>
+
+## License
+
+![N|Solid](https://successive.tech/wp-content/uploads/2021/05/logo-black.png)
