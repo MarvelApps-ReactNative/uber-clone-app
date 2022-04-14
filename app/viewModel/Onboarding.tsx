@@ -1,11 +1,9 @@
 import React from 'react';
 import {Screens} from '../config';
-import Onboardingscreen from '../views/onBoarding';
+import {NavigationProp} from '../models';
+import Onboardingscreen from '../views/onBoarding/Onboardingscreen';
 
-interface OnBoardingViewModelprops {
-  navigation: any;
-}
-const OnBoardingViewModel = (props: OnBoardingViewModelprops) => {
+const OnBoardingViewModel = (props: NavigationProp) => {
   const {navigation} = props;
 
   return (

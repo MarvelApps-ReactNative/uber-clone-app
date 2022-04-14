@@ -9,11 +9,11 @@ interface CurrentLocationDataType {
   lat: number;
   lng: number;
 }
-interface rideInfoDataType {
+interface RideInfoDataType {
   destinationCoord: CurrentLocationDataType
   destinationName: string
   originCoord: CurrentLocationDataType
   originName: string
 }
 
-export type {LocationDataType, CurrentLocationDataType,rideInfoDataType}
+export type {LocationDataType, CurrentLocationDataType,RideInfoDataType}

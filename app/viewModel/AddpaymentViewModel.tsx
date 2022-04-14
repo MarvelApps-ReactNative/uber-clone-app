@@ -2,21 +2,19 @@ import React from 'react';
 import {useDispatch} from 'react-redux';
 import {setPaymentIcons, setPaymentMethods} from '../redux/actions';
 import {paymentMethods} from '../config/dummyData/PaymentMethod';
-import AddPaymentScreen from '../views/addPayment';
+import {NavigationProp} from '../models';
+import {ScreenConstant} from '../config';
+import AddPaymentScreen from '../views/addPayment/AddPaymentScreen';
 
-interface AddPaymentViewModelprops {
-  navigation: any;
-}
-
-const AddPaymentViewModel = (props: AddPaymentViewModelprops) => {
+const AddPaymentViewModel = (props: NavigationProp) => {
   const {navigation} = props;
 
   const dispatch = useDispatch();
   const dispatchReduxData = (props: string | undefined, type: string) => {
-    if (type === 'label') {
+    if (type === ScreenConstant.addPayment.LABEL) {
       dispatch(setPaymentMethods(props));
     }
-    if (type === 'icon') {
+    if (type === ScreenConstant.addPayment.ICON) {
       dispatch(setPaymentIcons(props));
     }
     navigation.goBack();
@@ -26,7 +24,7 @@ const AddPaymentViewModel = (props: AddPaymentViewModelprops) => {
       {...{
         navigation,
         dispatchReduxData,
-        paymentMethods
+        paymentMethods,
       }}
     />
   );

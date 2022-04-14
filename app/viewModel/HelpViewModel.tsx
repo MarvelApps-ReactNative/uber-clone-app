@@ -4,13 +4,11 @@ import initialCoordinates from '../config/dummyData/Mapdata';
 import Geolocation from '@react-native-community/geolocation';
 import {LocationDataType} from '../models';
 import data from '../config/dummyData/Help';
-import HelpScreen from '../views/help';
+import {NavigationProp} from '../models';
 import {Screens} from '../config';
+import HelpScreen from '../views/help/HelpScreen';
 
-interface HelpViewModelprops {
-  navigation: any;
-}
-const HelpViewModel = (props: HelpViewModelprops) => {
+const HelpViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   const LocationData = useRef<LocationDataType>(initialCoordinates);
   const mapRef = React.useRef<MapView>(null);

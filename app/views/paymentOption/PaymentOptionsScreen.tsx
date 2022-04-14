@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Icon, COLORS, ScreenConstent, buttons} from '../../config';
+import {Icon, COLORS, ScreenConstant, buttons} from '../../config';
 import styles from './style';
 
 interface PaymentOptionsScreenprops {
@@ -38,14 +38,14 @@ const PaymentOptionsScreen = (props: PaymentOptionsScreenprops) => {
         </TouchableOpacity>
         <View style={styles.header}>
           <Text style={styles.headingText}>
-            {ScreenConstent.paymentOptions.PAYMENT_OPTIONS}
+            {ScreenConstant.paymentOptions.PAYMENT_OPTIONS}
           </Text>
         </View>
         <View style={styles.topButtonContainer}>
           <TouchableOpacity style={styles.button}>
             <Image source={Icon.USER} style={styles.userIcon} />
             <Text style={styles.buttontText}>
-              {ScreenConstent.paymentOptions.PERSONAL}
+              {ScreenConstant.paymentOptions.PERSONAL}
             </Text>
           </TouchableOpacity>
         </View>
@@ -53,13 +53,13 @@ const PaymentOptionsScreen = (props: PaymentOptionsScreenprops) => {
 
       <View style={styles.flex}>
         <Text style={styles.headingParagraphText}>
-          {ScreenConstent.paymentOptions.UBER_CASH}
+          {ScreenConstant.paymentOptions.UBER_CASH}
         </Text>
         <View style={styles.boxContainer}>
           <Image source={Icon.UBER} style={styles.smallIcon} />
           <View style={styles.margin}>
             <Text style={styles.smallHeadingText}>
-              {ScreenConstent.paymentOptions.UBER_CASH}
+              {ScreenConstant.paymentOptions.UBER_CASH}
             </Text>
             <Text style={styles.smallHeadingText}>$ {paymentsOption.cash}</Text>
           </View>
@@ -75,7 +75,7 @@ const PaymentOptionsScreen = (props: PaymentOptionsScreenprops) => {
           </View>
         </View>
         <Text style={styles.headingParagraphText}>
-          {ScreenConstent.paymentOptions.PAYMENT_METHOD}
+          {ScreenConstant.paymentOptions.PAYMENT_METHOD}
         </Text>
         <View style={styles.boxContainer}>
           <Image
@@ -97,7 +97,7 @@ const PaymentOptionsScreen = (props: PaymentOptionsScreenprops) => {
           </Text>
         </TouchableOpacity>
         <Text style={styles.headingParagraphText}>
-          {ScreenConstent.paymentOptions.VOUCHER}
+          {ScreenConstant.paymentOptions.VOUCHER}
         </Text>
         <TouchableOpacity style={styles.bottomTextVertical}>
           <Text style={styles.highlightedText}>{buttons.ADD_VOUCHER_CODE}</Text>

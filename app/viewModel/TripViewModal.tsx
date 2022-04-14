@@ -1,10 +1,8 @@
 import React from 'react';
-import TripScreen from '../views/trip';
+import {NavigationProp} from '../models';
+import TripScreen from '../views/trip/TripScreen';
 
-interface TripViewModalprops {
-  navigation: any;
-}
-const TripViewModal = (props: TripViewModalprops) => {
+const TripViewModal = (props: NavigationProp) => {
   const {navigation} = props;
 
   return (

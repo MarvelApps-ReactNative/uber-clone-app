@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Icon, ScreenConstent} from '../../config';
+import {Icon, ScreenConstant} from '../../config';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import {LocationDataType} from '../../models';
 import {Header} from '../../components';
@@ -29,22 +29,22 @@ const HelpScreen = (props: HelpScreenprops) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Header Title={ScreenConstent.help.HELP} />
+        <Header Title={ScreenConstant.help.HELP} />
         <Text style={styles.lastTripText}>
-          {ScreenConstent.help.YOUR_LAST_TRIP}
+          {ScreenConstant.help.YOUR_LAST_TRIP}
         </Text>
         <TouchableOpacity onPress={TripViewDetailScreen}>
           <View style={styles.tripContainer}>
             <View style={styles.timingContainer}>
               <Text style={styles.timingText}>
-                {ScreenConstent.help.TIME_TEXT}
+                {ScreenConstant.help.TIME_TEXT}
               </Text>
               <Text style={styles.timingText}>
-                {ScreenConstent.help.AMOUNT}
+                {ScreenConstant.help.AMOUNT}
               </Text>
             </View>
             <Text style={styles.bajajText}>
-              {ScreenConstent.help.BAJAJ_AUTO}
+              {ScreenConstant.help.BAJAJ_AUTO}
             </Text>
           </View>
           <View>
@@ -65,13 +65,13 @@ const HelpScreen = (props: HelpScreenprops) => {
         </TouchableOpacity>
         <View style={styles.padding}>
           <Text style={styles.mapText}>
-            {ScreenConstent.help.REPORT_AN_ISSUE_WITH_THIS_TRIP}
+            {ScreenConstant.help.REPORT_AN_ISSUE_WITH_THIS_TRIP}
           </Text>
         </View>
         <View style={styles.line} />
         <View style={styles.secondContainer}>
           <Text style={styles.allTopicText}>
-            {ScreenConstent.help.ALL_TOPIC}
+            {ScreenConstant.help.ALL_TOPIC}
           </Text>
           {data.map((item, index) => {
             return (

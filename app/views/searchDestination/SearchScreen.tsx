@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 import MapView, {Marker} from 'react-native-maps';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {Seperater} from '../../components';
-import {cars, COLORS, Icon, ScreenConstent} from '../../config';
+import {Seperator} from '../../components';
+import {cars, COLORS, Icon, ScreenConstant} from '../../config';
 import {LocationDataType} from '../../models';
 import styles from './style';
 
@@ -98,7 +98,7 @@ const SearchScreen = (props: SearchScreenprops) => {
           <View style={styles.inputContainer}>
             <TextInput
               ref={originTextInputRef}
-              placeholder={ScreenConstent.searchDestination.ENTER_PICKUP_TIME}
+              placeholder={ScreenConstant.searchDestination.ENTER_PICKUP_TIME}
               style={styles.textInput}
               value={originText}
               onChangeText={originTextSearchdata}
@@ -113,7 +113,7 @@ const SearchScreen = (props: SearchScreenprops) => {
             />
             <TextInput
               ref={destinationTextInputRef}
-              placeholder={ScreenConstent.searchDestination.WHERE_TO}
+              placeholder={ScreenConstant.searchDestination.WHERE_TO}
               style={styles.textInput}
               value={destinationText}
               onChangeText={destinationTextSearchdata}
@@ -215,7 +215,7 @@ const SearchScreen = (props: SearchScreenprops) => {
                       <Text style={styles.para2}>{item.secondary_text}</Text>
                     </View>
                   </TouchableOpacity>
-                  <Seperater />
+                  <Seperator />
                 </View>
               );
             }}
@@ -227,14 +227,14 @@ const SearchScreen = (props: SearchScreenprops) => {
               style={styles.searchTextContainer}
               onPress={() => {
                 getCurrentLocation(),
-                  setOriginText(ScreenConstent.searchDestination.LOCATION);
+                  setOriginText(ScreenConstant.searchDestination.LOCATION);
                 Keyboard.dismiss();
               }}>
               <View style={styles.searchImageContainer}>
                 <Image source={Icon.LOCATION} style={styles.searchIcon} />
               </View>
               <Text style={styles.paragraph}>
-                {ScreenConstent.searchDestination.SET_CURRENT_LOCATION}
+                {ScreenConstant.searchDestination.SET_CURRENT_LOCATION}
               </Text>
             </TouchableOpacity>
           )}
@@ -252,7 +252,7 @@ const SearchScreen = (props: SearchScreenprops) => {
               <Image source={Icon.LOCATION} style={styles.searchIcon} />
             </View>
             <Text style={styles.paragraph}>
-              {ScreenConstent.searchDestination.SET_LOCATION_ON_MAP}
+              {ScreenConstant.searchDestination.SET_LOCATION_ON_MAP}
             </Text>
           </TouchableOpacity>
 

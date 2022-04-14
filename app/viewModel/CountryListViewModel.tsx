@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useEffect} from 'react';
-import CountryList from '../views/countryList';
+import CountryListScreen from '../views/countryList/CountryListScreen';
 
 const CountryListViewModel = ({navigation}: any) => {
   const fetch = async () => {
@@ -22,7 +22,7 @@ const CountryListViewModel = ({navigation}: any) => {
   }, []);
 
   return (
-    <CountryList
+    <CountryListScreen
       {...{
         navigation,
       }}

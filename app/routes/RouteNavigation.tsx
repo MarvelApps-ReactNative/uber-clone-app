@@ -40,7 +40,7 @@ import {KeyboardAvoidingView} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
-const Routenavigation = () => {
+const RouteNavigation = () => {
   return (
     <NavigationContainer>
       <KeyboardAvoidingView style={{flex: 1}}>
@@ -179,4 +179,4 @@ const Routenavigation = () => {
   );
 };
 
-export default Routenavigation;
+export default RouteNavigation;

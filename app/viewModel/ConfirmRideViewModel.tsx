@@ -5,21 +5,21 @@ import {api, APIKEY, Screens} from '../config';
 import {
   CurrentLocationDataType,
   LocationDataType,
-  rideInfoDataType,
+  RideInfoDataType,
 } from '../models';
 import {sendRequest} from '../network';
 import {setOriginCoord, setOriginName} from '../redux/actions';
-import ConfirmRideScreen from '../views/confirmRide';
-import ConfirmPickupScreen from '../views/confirmRide/ConfirmPickup';
-import ConfirmScreen from '../views/confirmRide/ConfirmRide';
-import CovideMessageScreen from '../views/confirmRide/CovidMesssage';
+import ConfirmRideScreen from '../views/confirmRide/ConfirmRideScreen';
+import ConfirmPickupScreen from '../views/confirmRide/ConfirmPickupScreen';
+import ConfirmScreen from '../views/confirmRide/ConfirmScreen';
+import CovideMessageScreen from '../views/confirmRide/CovideMessageScreen';
 
 interface ConfirmRideViewModelprops {
   navigation: any;
   route: any;
 }
 type rideInfoType = {
-  rideInfo: rideInfoDataType;
+  rideInfo: RideInfoDataType;
 };
 const ConfirmRideViewModel = (props: ConfirmRideViewModelprops) => {
   const {navigation, route} = props;

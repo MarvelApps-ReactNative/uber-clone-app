@@ -2,14 +2,8 @@ import React, {useRef} from 'react';
 import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 import MapView, {Marker} from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
-import {Abutton, Seperater} from '../../components';
-import {
-  APIKEY,
-  buttons,
-  cars,
-  Icon,
-  ScreenConstent,
-} from '../../config';
+import {CommonButton, Seperator} from '../../components';
+import {APIKEY, buttons, cars, Icon, ScreenConstant} from '../../config';
 import {BottomSheetModal, BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {BottomSheetModalMethods} from '@gorhom/bottom-sheet/lib/typescript/types';
@@ -52,7 +46,7 @@ interface SearchResultprops {
   PaymentOption: () => any;
 }
 
-const SearchResult = (props: SearchResultprops) => {
+const SearchResultScreen = (props: SearchResultprops) => {
   const {
     navigation,
     getCarImage,
@@ -192,10 +186,10 @@ const SearchResult = (props: SearchResultprops) => {
             enableDismissOnClose={false}
             onChange={handleSheetChanges}>
             <Text style={styles.promoText}>
-              {ScreenConstent.serachReasult.PROMOTION_TEXT}
+              {ScreenConstant.serachResult.PROMOTION_TEXT}
             </Text>
 
-            <Seperater />
+            <Seperator />
 
             {bottomIndex != 0 &&
               cars.map((item, index) => {
@@ -217,7 +211,7 @@ const SearchResult = (props: SearchResultprops) => {
                         <Text style={styles.buttonText}>{item.type}</Text>
                         <Text style={styles.buttonSubText}>
                           {' '}
-                          {ScreenConstent.chooseRide.TIME}{' '}
+                          {ScreenConstant.chooseRide.TIME}{' '}
                         </Text>
                       </View>
                     </View>
@@ -246,7 +240,7 @@ const SearchResult = (props: SearchResultprops) => {
                     </Text>
                     <Text style={styles.buttonSubText}>
                       {' '}
-                      {ScreenConstent.chooseRide.TIME}{' '}
+                      {ScreenConstant.chooseRide.TIME}{' '}
                     </Text>
                   </View>
                 </View>
@@ -288,7 +282,7 @@ const SearchResult = (props: SearchResultprops) => {
                 </View>
                 <Image source={Icon.RIGHTARROW} style={styles.moneyIcon} />
               </TouchableOpacity>
-              <Abutton
+              <CommonButton
                 title={buttons.CONFIRM + ' ' + cars[selectedCar].type}
                 onPress={navigateToNextScreen}
               />
@@ -300,4 +294,4 @@ const SearchResult = (props: SearchResultprops) => {
   );
 };
 
-export default SearchResult;
+export default SearchResultScreen;

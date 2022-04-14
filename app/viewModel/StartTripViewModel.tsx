@@ -1,15 +1,12 @@
 import React, {useState} from 'react';
 import {Animated} from 'react-native';
+import {NavigationProp} from '../models';
 import {bottomsheetPanResponder} from '../common';
 import {Screens} from '../config';
 import {RideInformation} from '../config/dummyData/RiderInformation';
-import StartTripScreen from '../views/startTrip';
+import StartTripScreen from '../views/startTrip/StartTripScreen';
 
-interface StartTripViewModelprops {
-  navigation: any;
-}
-
-const StartTripViewModel = (props: StartTripViewModelprops) => {
+const StartTripViewModel = (props: NavigationProp) => {
   const {navigation} = props;
 
   const [rideInfo, setRideInfo] = useState(RideInformation);

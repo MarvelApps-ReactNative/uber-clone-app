@@ -1,11 +1,9 @@
 import React, {memo, useEffect, useState} from 'react';
 import {Screens} from '../config';
-import SplashScreen from '../views/splashScreen';
+import {NavigationProp} from '../models';
+import SplashScreen from '../views/splashScreen/SplashScreen';
 
-interface SplashScreenprops {
-  navigation: any;
-}
-const SplashScreenViewModel = (props: SplashScreenprops) => {
+const SplashScreenViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   const [authLoaded, setAuthLoaded] = useState(false);
 

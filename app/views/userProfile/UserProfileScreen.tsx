@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
-import {Icon} from '../../config';
+import {constants, Icon} from '../../config';
 import {AccountDetails} from '../../models';
 import styles from './style';
 
@@ -21,7 +21,7 @@ interface userprofileprops {
   onPressHomeScreen: () => any;
   onPressEditAccount: () => any;
 }
-const Userprofile = (props: userprofileprops) => {
+const UserProfileScreen = (props: userprofileprops) => {
   const {
     navigation,
     profileList,
@@ -87,8 +87,9 @@ const Userprofile = (props: userprofileprops) => {
           );
         })}
       </View>
+      <Text style={styles.versionText}>{constants.VERSION}</Text>
     </SafeAreaView>
   );
 };
 
-export default Userprofile;
+export default UserProfileScreen;

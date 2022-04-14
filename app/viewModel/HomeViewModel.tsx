@@ -5,14 +5,11 @@ import Geolocation from '@react-native-community/geolocation';
 import initialCoordinates from '../config/dummyData/Mapdata';
 import {LocationDataType} from '../models';
 import {RideType, Buttons} from '../config/dummyData/HomeCar';
-import Homepage from '../views/home';
+import {NavigationProp} from '../models';
 import {Screens} from '../config';
+import HomeScreen from '../views/home/HomeScreen';
 
-interface HomeViewModelprops {
-  navigation: any;
-}
-
-const HomeViewModel = (props: HomeViewModelprops) => {
+const HomeViewModel = (props: NavigationProp) => {
   const {navigation} = props;
 
   const [visible, setVisible] = useState<boolean>(false);
@@ -47,7 +44,7 @@ const HomeViewModel = (props: HomeViewModelprops) => {
   }, []);
 
   return (
-    <Homepage
+    <HomeScreen
       {...{
         navigation,
         visible,

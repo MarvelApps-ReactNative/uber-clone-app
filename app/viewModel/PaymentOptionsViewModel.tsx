@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Screens} from '../config';
-import PaymentOptionsScreen from '../views/paymentOption';
+import {NavigationProp} from '../models';
+import PaymentOptionsScreen from '../views/paymentOption/PaymentOptionsScreen';
 
-interface PaymentOptionsViewModelprops {
-  navigation: any;
-}
-const PaymentOptionsViewModel = (props: PaymentOptionsViewModelprops) => {
+const PaymentOptionsViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);

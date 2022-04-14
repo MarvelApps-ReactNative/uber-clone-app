@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Modal, Pressable, Text, TouchableOpacity, View} from 'react-native';
 import styles from './style';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
-import {ScreenConstent, Screens} from '../../config';
+import {ScreenConstant, Screens} from '../../config';
 import {useDispatch, useSelector} from 'react-redux';
 import {setDateScheduleRide, setTimeScheduleRide} from '../../redux/actions';
 import {formatDate, formatTime} from '../../common';
@@ -16,12 +16,12 @@ const ScheduleRideModal = ({visible, setVisible, navigation}: any) => {
   const [date, setDate] = useState(
     scheduleRide.date
       ? scheduleRide.date
-      : ScreenConstent.scheduleRideModal.DATE_TEXT,
+      : ScreenConstant.scheduleRideModal.DATE_TEXT,
   );
   const [time, setTime] = useState(
     scheduleRide.time
       ? scheduleRide.time
-      : ScreenConstent.scheduleRideModal.TIME_TEXT,
+      : ScreenConstant.scheduleRideModal.TIME_TEXT,
   );
 
   const setPickupTime = () => {
@@ -34,12 +34,12 @@ const ScheduleRideModal = ({visible, setVisible, navigation}: any) => {
     setDate(
       scheduleRide.date
         ? scheduleRide.date
-        : ScreenConstent.scheduleRideModal.DATE_TEXT,
+        : ScreenConstant.scheduleRideModal.DATE_TEXT,
     );
     setTime(
       scheduleRide.time
         ? scheduleRide.time
-        : ScreenConstent.scheduleRideModal.TIME_TEXT,
+        : ScreenConstant.scheduleRideModal.TIME_TEXT,
     );
   };
   return (
@@ -55,7 +55,7 @@ const ScheduleRideModal = ({visible, setVisible, navigation}: any) => {
         <View style={styles.mainView}>
           <View style={styles.containerView}>
             <Text style={styles.titleText}>
-              {ScreenConstent.scheduleRideModal.SCHEDULE_A_RIDE}
+              {ScreenConstant.scheduleRideModal.SCHEDULE_A_RIDE}
             </Text>
           </View>
           <TouchableOpacity
@@ -75,7 +75,7 @@ const ScheduleRideModal = ({visible, setVisible, navigation}: any) => {
               }}
               style={styles.setPickupTimeButton}>
               <Text style={styles.setTimeText}>
-                {ScreenConstent.scheduleRideModal.SET_PICKUP_TIME}
+                {ScreenConstant.scheduleRideModal.SET_PICKUP_TIME}
               </Text>
             </TouchableOpacity>
           </View>

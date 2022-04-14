@@ -1,17 +1,15 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {Screens} from '../config';
-import Wallet from '../views/wallet';
+import {NavigationProp} from '../models';
+import WalletScreen from '../views/wallet/WalletScreen';
 
-interface WalletViewModelprops {
-  navigation: any;
-}
-const WalletViewModel = (props: WalletViewModelprops) => {
+const WalletViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   const paymentsOption = useSelector((state: any) => state.paymentsOption);
 
   return (
-    <Wallet
+    <WalletScreen
       {...{
         paymentsOption,
         onPressGoBack: () => navigation.goBack(),

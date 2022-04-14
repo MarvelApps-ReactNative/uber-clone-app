@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     width: 20,
     resizeMode: 'contain',
   },
-  BannerContainer: {
+  bannerContainer: {
     backgroundColor: 'purple',
     flexDirection: 'row',
     justifyContent: 'space-between',

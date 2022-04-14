@@ -1,13 +1,10 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
+import {NavigationProp} from '../../models';
 import {constants} from '../../config';
 import styles from './style';
 
-interface Props {
-  navigation: any;
-}
-
-const CountryList = (props: Props) => {
+const CountryListScreen = (props: NavigationProp) => {
   const {navigation} = props;
 
   return (
@@ -17,4 +14,4 @@ const CountryList = (props: Props) => {
   );
 };
 
-export default CountryList;
+export default CountryListScreen;

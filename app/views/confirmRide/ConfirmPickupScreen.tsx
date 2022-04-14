@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
-import {Seperater, Abutton} from '../../components';
-import {ScreenConstent, buttons} from '../../config';
+import {Seperator, CommonButton} from '../../components';
+import {ScreenConstant, buttons} from '../../config';
 import styles from './style';
 
 interface input {
@@ -16,12 +16,12 @@ const ConfirmPickupScreen = (props: input) => {
   return (
     <SafeAreaView style={styles.confirmPickupScreenMainContainer}>
       <Text style={styles.headerText}>
-        {ScreenConstent.confirmRide.CONFIRM_PICKUP_SPOT}
+        {ScreenConstant.confirmRide.CONFIRM_PICKUP_SPOT}
       </Text>
-      <Seperater />
+      <Seperator />
       <View style={styles.subSecondContainer}>
         <Text style={styles.addressText}>{place}</Text>
-        <Abutton
+        <CommonButton
           title={buttons.CONFIRM_PICKUP}
           onPress={() => {
             setItemIndex(1);

@@ -10,8 +10,8 @@ import {
   View,
 } from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
-import {BackButton, Seperater} from '../../components';
-import {buttons, Icon, ScreenConstent} from '../../config';
+import {BackButton, Seperator} from '../../components';
+import {buttons, Icon, ScreenConstant} from '../../config';
 import styles from './style';
 
 interface StartTripScreenprops {
@@ -72,23 +72,23 @@ const StartTripScreen = (props: StartTripScreenprops) => {
         <View style={styles.subSecondContainer}>
           <View style={styles.boxContainer}>
             <Text style={styles.headingText}>
-              {ScreenConstent.startTrip.HEADING_TO} {destination}
+              {ScreenConstant.startTrip.HEADING_TO} {destination}
             </Text>
             <View style={styles.blackBox}>
               <Text style={styles.text}>
-                {ScreenConstent.startTrip.BANNER_TIME}
+                {ScreenConstant.startTrip.BANNER_TIME}
               </Text>
             </View>
           </View>
-          <Seperater />
+          <Seperator />
           <ScrollView>
             <View style={styles.boxContainer}>
               <View>
                 <Text style={styles.headingText}>
-                  {ScreenConstent.startTrip.TIP} {rideInfo.driver_name}
+                  {ScreenConstant.startTrip.TIP} {rideInfo.driver_name}
                 </Text>
                 <Text style={styles.paragraphText}>
-                  {ScreenConstent.startTrip.TRIP_DELIVER_TEXT}
+                  {ScreenConstant.startTrip.TRIP_DELIVER_TEXT}
                 </Text>
               </View>
               <Image source={Icon.CAR} style={styles.carImage} />
@@ -102,7 +102,7 @@ const StartTripScreen = (props: StartTripScreenprops) => {
                 );
               })}
             </View>
-            <Seperater />
+            <Seperator />
             <View style={styles.listItemContainer}>
               <View style={styles.textContainer}>
                 <Image source={Icon.LOCATION} style={styles.listItemIcon} />
@@ -120,9 +120,9 @@ const StartTripScreen = (props: StartTripScreenprops) => {
                 <Image source={Icon.USER} style={styles.listItemIcon} />
                 <View>
                   <Text style={styles.paragraphText}>
-                    {ScreenConstent.pickupRide.AMOUNT}
+                    {ScreenConstant.pickupRide.AMOUNT}
                   </Text>
-                  <Text>{ScreenConstent.pickupRide.PAYTM}</Text>
+                  <Text>{ScreenConstant.pickupRide.PAYTM}</Text>
                 </View>
               </View>
               <TouchableOpacity onPress={onPressPaymentOption}>
@@ -133,7 +133,7 @@ const StartTripScreen = (props: StartTripScreenprops) => {
               <View style={styles.textContainer}>
                 <Image source={Icon.ARROWS} style={styles.listItemIcon} />
                 <Text style={styles.paragraphText}>
-                  {ScreenConstent.pickupRide.RIDING_WITH_SOMEONE}
+                  {ScreenConstant.pickupRide.RIDING_WITH_SOMEONE}
                 </Text>
               </View>
               <TouchableOpacity>
@@ -144,7 +144,7 @@ const StartTripScreen = (props: StartTripScreenprops) => {
               <View style={styles.textContainer}>
                 <Image source={Icon.LOCATION} style={styles.listItemIcon} />
                 <Text style={styles.paragraphText}>
-                  {ScreenConstent.pickupRide.SHARE_TRIP_STATUS}
+                  {ScreenConstant.pickupRide.SHARE_TRIP_STATUS}
                 </Text>
               </View>
               <TouchableOpacity>

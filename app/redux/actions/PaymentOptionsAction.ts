@@ -16,7 +16,7 @@ const setPaymentMethods = (payload: string | undefined) => {
 
 const setPaymentIcons = (payload: string | undefined) => {
   return {
-    type: ActionsConstants.SET_PATMENT_ICON,
+    type: ActionsConstants.SET_PAYMENT_ICON,
     payload: payload,
   };
 };

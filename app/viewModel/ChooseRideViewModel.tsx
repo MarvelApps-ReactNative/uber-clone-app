@@ -1,15 +1,13 @@
 import React from 'react';
 import {Screens} from '../config';
-import ChooseRide from '../views/chooseRide';
+import {NavigationProp} from '../models';
+import ChooseRideScreen from '../views/chooseRide/ChooseRideScreen';
 
-interface ChooseRideViewModelprops {
-  navigation: any;
-}
-const ChooseRideViewModel = (props: ChooseRideViewModelprops) => {
+const ChooseRideViewModel = (props: NavigationProp) => {
   const {navigation} = props;
 
   return (
-    <ChooseRide
+    <ChooseRideScreen
       {...{
         navigation,
         PaymentOptionScreen: () =>

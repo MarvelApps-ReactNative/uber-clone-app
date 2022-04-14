@@ -1,18 +1,16 @@
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import {Screens} from '../config';
-import LoginScreen from '../views/login';
+import {ScreenConstant, Screens} from '../config';
+import {NavigationProp} from '../models';
+import LoginScreen from '../views/login/LoginScreen';
 
-interface LoginViewModelprops {
-  navigation: any;
-}
-const LoginViewModel = (props: LoginViewModelprops) => {
+const LoginViewModel = (props: NavigationProp) => {
   const {navigation} = props;
 
   const UserLogin = useSelector((state: any) => state.accountDetails);
 
   useEffect(() => {
-    if (UserLogin.email || UserLogin === 'email') {
+    if (UserLogin.email || UserLogin === ScreenConstant.login.EMAIL) {
       navigation.replace(Screens.HomeViewModel);
     }
   }, [UserLogin]);

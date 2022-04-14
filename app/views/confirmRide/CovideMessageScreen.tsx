@@ -1,11 +1,11 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
-import {Abutton} from '../../components';
+import {CommonButton} from '../../components';
 import {
   AnimationType,
   buttons,
   CovidMessage,
-  ScreenConstent,
+  ScreenConstant,
 } from '../../config';
 import LottieView from 'lottie-react-native';
 import styles from './style';
@@ -20,7 +20,7 @@ const CovideMessageScreen = (props: input) => {
   return (
     <SafeAreaView style={styles.subSecondContainer}>
       <Text style={styles.headingText}>
-        {ScreenConstent.covidMessage.HELP_KEEP_YOUR_COMMUNITY_SAFE}
+        {ScreenConstant.covidMessage.HELP_KEEP_YOUR_COMMUNITY_SAFE}
       </Text>
       <LottieView
         source={AnimationType.COVID_SAFETY}
@@ -37,7 +37,10 @@ const CovideMessageScreen = (props: input) => {
           </View>
         );
       })}
-      <Abutton title={buttons.READY_TO_RIDE} onPress={() => setItemIndex(2)} />
+      <CommonButton
+        title={buttons.READY_TO_RIDE}
+        onPress={() => setItemIndex(2)}
+      />
     </SafeAreaView>
   );
 };

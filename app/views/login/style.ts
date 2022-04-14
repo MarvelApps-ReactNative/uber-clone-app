@@ -91,6 +91,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
     color: COLORS.black,
   },
+  description: {
+    color: COLORS.gray2,
+    fontSize: 14,
+  },
 });
 
 export default styles;

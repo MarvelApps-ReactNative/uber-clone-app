@@ -2,17 +2,15 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {profileList, Screens} from '../config';
 import {UserProfile} from '../config/dummyData/UserProfile';
-import Userprofile from '../views/userProfile';
+import {NavigationProp} from '../models';
+import UserProfileScreen from '../views/userProfile/UserProfileScreen';
 
-interface UserprofileViewModel {
-  navigation: any;
-}
-const UserprofileViewModel = (props: UserprofileViewModel) => {
+const UserProfileViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   const profileUri = useSelector((state: any) => state.profileImage);
   const accountDetails = useSelector((state: any) => state.accountDetails);
   return (
-    <Userprofile
+    <UserProfileScreen
       {...{
         navigation,
         profileList,
@@ -26,4 +24,4 @@ const UserprofileViewModel = (props: UserprofileViewModel) => {
     />
   );
 };
-export default UserprofileViewModel;
+export default UserProfileViewModel;

@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   list: {
     flexDirection: 'row',
-    marginVertical: 15,
+    marginVertical: 18,
   },
   icons: {
     height: 18,
@@ -104,6 +104,10 @@ const styles = StyleSheet.create({
     color: COLORS.black,
     marginLeft: 20,
     ...Font.body,
+  },
+  versionText: {
+    color: COLORS.transparentBlack7,
+    marginLeft: 15,
   },
 });
 

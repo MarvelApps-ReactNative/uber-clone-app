@@ -7,7 +7,7 @@ import {APIKEY, Icon, Size} from '../../config';
 import {
   CurrentLocationDataType,
   LocationDataType,
-  rideInfoDataType,
+  RideInfoDataType,
 } from '../../models';
 import styles from './style';
 
@@ -20,7 +20,7 @@ interface ConfirmRideScreenprops {
   longitude: number;
   loc: CurrentLocationDataType;
   itemIndex: number;
-  rideInfo: rideInfoDataType;
+  rideInfo: RideInfoDataType;
 }
 const ConfirmRideScreen = (props: ConfirmRideScreenprops) => {
   const {

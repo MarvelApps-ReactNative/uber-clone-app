@@ -1,10 +1,8 @@
 import React from 'react';
-import AddCardScreeen from '../views/addCard';
+import { NavigationProp } from '../models';
+import AddCardScreeen from '../views/addCard/AddCardScreeen';
 
-interface AddCardViewModelprops {
-  navigation: any;
-}
-const AddCardViewModel = (props: AddCardViewModelprops) => {
+const AddCardViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   return (
     <AddCardScreeen

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import {ScheduleRideModal} from '../../components';
-import {Icon, ScreenConstent} from '../../config';
+import {Icon, ScreenConstant} from '../../config';
 import {LocationDataType} from '../../models';
 import styles from './style';
 
@@ -32,7 +32,7 @@ interface Homepageprops {
   SearchScreen: () => any;
 }
 
-const Homepage = (props: Homepageprops) => {
+const HomeScreen = (props: Homepageprops) => {
   const {
     navigation,
     visible,
@@ -63,10 +63,10 @@ const Homepage = (props: Homepageprops) => {
         <TouchableOpacity style={styles.bannerContainer} onPress={SearchScreen}>
           <View style={styles.bannerTextContainer}>
             <Text style={styles.bannerText}>
-              {ScreenConstent.home.WELCOME_TO_UBER}
+              {ScreenConstant.home.WELCOME_TO_UBER}
             </Text>
             <Text style={styles.rideText}>
-              {ScreenConstent.home.RIDE_WITH_UBER}
+              {ScreenConstant.home.RIDE_WITH_UBER}
             </Text>
           </View>
           <Image source={Icon.KEYCHAIN} style={styles.banner} />
@@ -82,7 +82,7 @@ const Homepage = (props: Homepageprops) => {
                   {index == 0 && (
                     <View style={styles.renderItem}>
                       <Text style={styles.promoText}>
-                        {ScreenConstent.home.PROMO}
+                        {ScreenConstant.home.PROMO}
                       </Text>
                     </View>
                   )}
@@ -97,14 +97,14 @@ const Homepage = (props: Homepageprops) => {
         <View style={styles.pickupPointConatiner}>
           <TouchableOpacity onPress={SearchScreen}>
             <Text style={styles.titleText}>
-              {ScreenConstent.home.ENTER_PICKUP_POINT}
+              {ScreenConstant.home.ENTER_PICKUP_POINT}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => setVisible(true)}
             style={styles.timeButton}>
             <Image source={Icon.CLOCK} style={styles.smallIcon} />
-            <Text style={styles.paragraphText}>{ScreenConstent.home.NOW}</Text>
+            <Text style={styles.paragraphText}>{ScreenConstant.home.NOW}</Text>
             <Image source={Icon.DOWN} style={styles.smallIcon} />
           </TouchableOpacity>
         </View>
@@ -129,7 +129,7 @@ const Homepage = (props: Homepageprops) => {
             );
           })}
         </View>
-        <Text style={styles.titleText}>{ScreenConstent.home.AROUND_YOU}</Text>
+        <Text style={styles.titleText}>{ScreenConstant.home.AROUND_YOU}</Text>
         <View style={styles.map}>
           <MapView
             ref={mapRef}
@@ -149,4 +149,4 @@ const Homepage = (props: Homepageprops) => {
     </SafeAreaView>
   );
 };
-export default Homepage;
+export default HomeScreen;

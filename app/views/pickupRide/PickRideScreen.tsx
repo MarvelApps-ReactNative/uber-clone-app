@@ -9,9 +9,9 @@ import {
 } from 'react-native';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
-import {Seperater} from '../../components';
-import {APIKEY, buttons, Icon, ScreenConstent} from '../../config';
-import {rideInfoDataType} from '../../models';
+import {Seperator} from '../../components';
+import {APIKEY, buttons, Icon, ScreenConstant} from '../../config';
+import {RideInfoDataType} from '../../models';
 import {BottomSheetModal, BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 import {BottomSheetModalMethods} from '@gorhom/bottom-sheet/lib/typescript/types';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
@@ -27,9 +27,7 @@ interface PickRideScreenprops {
     languages: string;
     phone_no: string;
   };
-  destination: string;
-  dropdown: string;
-  rideInfostate: rideInfoDataType;
+  rideInfostate: RideInfoDataType;
   navigateToHome: () => any;
   PaymentOption: () => any;
   snapPointsFirst: string[];
@@ -42,8 +40,6 @@ const PickRideScreen = (props: PickRideScreenprops) => {
   const {
     navigation,
     rideInfo,
-    destination,
-    dropdown,
     rideInfostate,
     navigateToHome,
     PaymentOption,
@@ -112,17 +108,17 @@ const PickRideScreen = (props: PickRideScreenprops) => {
             snapPoints={snapPointsFirst}
             enablePanDownToClose={false}
             enableDismissOnClose={false}
-            enableContentPanningGesture={true}
+            enableContentPanningGesture={false}
             enableHandlePanningGesture={true}
             onChange={handleSheetChanges}>
             <View style={styles.subSecondMainContainer}>
               <View style={styles.boxContainer}>
                 <Text style={styles.headingText}>
-                  {ScreenConstent.pickupRide.MEET_AT_PICKUP_POINT}
+                  {ScreenConstant.pickupRide.MEET_AT_PICKUP_POINT}
                 </Text>
                 <View style={styles.blackBox}>
                   <Text style={styles.text}>
-                    {ScreenConstent.startTrip.BANNER_TIME}
+                    {ScreenConstant.startTrip.BANNER_TIME}
                   </Text>
                 </View>
               </View>
@@ -158,29 +154,33 @@ const PickRideScreen = (props: PickRideScreenprops) => {
                   </View>
                 </View>
               </View>
-              <Seperater />
+              <Seperator />
 
               <View style={styles.subSecondContainer}>
-                <TouchableOpacity style={styles.BannerContainer}>
+                <TouchableOpacity style={styles.bannerContainer}>
                   <View style={styles.bannerTextContainer}>
                     <Text style={styles.bannerText}>
-                      {ScreenConstent.home.WELCOME_TO_UBER}
+                      {ScreenConstant.home.WELCOME_TO_UBER}
                     </Text>
                     <Text style={styles.rideText}>
-                      {ScreenConstent.home.RIDE_WITH_UBER}
+                      {ScreenConstant.home.RIDE_WITH_UBER}
                     </Text>
                   </View>
                   <Image source={Icon.KEYCHAIN} style={styles.banner} />
                 </TouchableOpacity>
               </View>
-              <Seperater />
+              <Seperator />
               <View style={styles.subSecondContainer}>
                 <View style={styles.listItemContainer}>
                   <View style={styles.textContainer}>
                     <Image source={Icon.LOCATION} style={styles.listItemIcon} />
                     <View>
-                      <Text style={styles.paragraph}>{destination}</Text>
-                      <Text style={styles.textColor}>{dropdown}</Text>
+                      <Text style={styles.paragraph}>
+                        {ScreenConstant.pickupRide.NEW_DELHI_RAILWAY_STATION}
+                      </Text>
+                      <Text style={styles.textColor}>
+                        {ScreenConstant.pickupRide.DROPOFF}
+                      </Text>
                     </View>
                   </View>
                   <TouchableOpacity style={styles.align}>
@@ -190,14 +190,14 @@ const PickRideScreen = (props: PickRideScreenprops) => {
                   </TouchableOpacity>
                 </View>
               </View>
-              <Seperater />
+              <Seperator />
               <View style={styles.subSecondContainer}>
                 <View style={styles.listItemContainer}>
                   <View style={styles.textContainer}>
                     <Image source={Icon.USER} style={styles.listItemIcon} />
                     <View>
                       <Text style={styles.paragraph}>
-                        {ScreenConstent.pickupRide.AMOUNT}
+                        {ScreenConstant.pickupRide.AMOUNT}
                       </Text>
                       <Text style={styles.textColor}>
                         {paymentsOption.enablePayment}
@@ -211,13 +211,13 @@ const PickRideScreen = (props: PickRideScreenprops) => {
                   </TouchableOpacity>
                 </View>
               </View>
-              <Seperater />
+              <Seperator />
               <View style={styles.subSecondContainer}>
                 <View style={styles.listItemContainer}>
                   <View style={styles.textContainer}>
                     <Image source={Icon.ARROWS} style={styles.listItemIcon} />
                     <Text style={styles.paragraph}>
-                      {ScreenConstent.pickupRide.RIDING_WITH_SOMEONE}
+                      {ScreenConstant.pickupRide.RIDING_WITH_SOMEONE}
                     </Text>
                   </View>
                   <TouchableOpacity style={styles.align}>
@@ -225,13 +225,13 @@ const PickRideScreen = (props: PickRideScreenprops) => {
                   </TouchableOpacity>
                 </View>
               </View>
-              <Seperater />
+              <Seperator />
               <View style={styles.subFooterContainer}>
                 <View style={styles.listItemContainer}>
                   <View style={styles.textContainer}>
                     <Image source={Icon.LOCATION} style={styles.listItemIcon} />
                     <Text style={styles.paragraph}>
-                      {ScreenConstent.pickupRide.SHARE_TRIP_STATUS}
+                      {ScreenConstant.pickupRide.SHARE_TRIP_STATUS}
                     </Text>
                   </View>
                   <TouchableOpacity style={styles.align}>

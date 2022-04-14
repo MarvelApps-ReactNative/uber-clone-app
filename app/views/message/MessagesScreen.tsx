@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
-import {Icon, ScreenConstent} from '../../config';
+import {Icon, ScreenConstant} from '../../config';
 import styles from './style';
 
 interface MessagesScreenprops {
@@ -17,7 +17,7 @@ const MessagesScreen = (props: MessagesScreenprops) => {
           <Image source={Icon.BACK} style={styles.icon} />
         </TouchableOpacity>
         <Text style={styles.messageText}>
-          {ScreenConstent.messagesScreen.MESSAGES}
+          {ScreenConstant.messagesScreen.MESSAGES}
         </Text>
       </View>
       <View style={styles.secondContainer}>
@@ -26,10 +26,10 @@ const MessagesScreen = (props: MessagesScreenprops) => {
             <Image source={Icon.GIFTBOX} style={styles.icon} />
           </View>
           <Text style={styles.couponText}>
-            {ScreenConstent.messagesScreen.COUPON}
+            {ScreenConstant.messagesScreen.COUPON}
           </Text>
           <Text style={styles.offerText}>
-            {ScreenConstent.messagesScreen.OFFER_TEXT}
+            {ScreenConstant.messagesScreen.OFFER_TEXT}
           </Text>
         </View>
       </View>

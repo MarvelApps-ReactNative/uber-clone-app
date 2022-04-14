@@ -1,12 +1,9 @@
 import React from 'react';
 import {Screens} from '../config';
-import AlertScreen from '../views/alertMessage';
+import {NavigationProp} from '../models';
+import AlertScreen from '../views/alertMessage/AlertScreen';
 
-interface AlertMessageProps {
-  navigation: any;
-}
-
-const AlertMessageViewModel = (props: AlertMessageProps) => {
+const AlertMessageViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   return (
     <AlertScreen

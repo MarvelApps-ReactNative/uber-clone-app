@@ -8,8 +8,9 @@ import {
   View,
 } from 'react-native';
 import {FacebookLogin, GoogleLogIn} from '../../common';
-import {Seperater} from '../../components';
-import {buttons, COLORS, Icon, ScreenConstent} from '../../config';
+import { Seperator } from '../../components';
+
+import {buttons, COLORS, Icon, ScreenConstant} from '../../config';
 import styles from './style';
 
 interface LoginScreenprops {
@@ -22,7 +23,7 @@ const LoginScreen = (props: LoginScreenprops) => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.mobileTitleText}>
-        {ScreenConstent.login.ENTER_NUMBER}
+        {ScreenConstant.login.ENTER_NUMBER}
       </Text>
       <View style={styles.inputContainer}>
         <View style={styles.iconContainer}>
@@ -31,7 +32,7 @@ const LoginScreen = (props: LoginScreenprops) => {
         </View>
         <TextInput
           style={styles.inputTextStyle}
-          placeholder={ScreenConstent.login.MOBILE_NUMBER}
+          placeholder={ScreenConstant.login.MOBILE_NUMBER}
           placeholderTextColor={COLORS.darkGray}
         />
       </View>
@@ -43,11 +44,11 @@ const LoginScreen = (props: LoginScreenprops) => {
           <Image source={Icon.NEXT} style={styles.nextIcon} />
         </View>
       </TouchableOpacity>
-      <Text>{ScreenConstent.login.DESCRIPTION}</Text>
+      <Text style={styles.description}>{ScreenConstant.login.DESCRIPTION}</Text>
       <View style={styles.divider}>
-        <Seperater />
-        <Text style={styles.orText}>{ScreenConstent.login.OR}</Text>
-        <Seperater />
+        <Seperator />
+        <Text style={styles.orText}>{ScreenConstant.login.OR}</Text>
+        <Seperator />
       </View>
       <TouchableOpacity style={styles.socialButton} onPress={FacebookLogin}>
         <Image source={Icon.FACEBOOK} style={styles.socialIcon} />

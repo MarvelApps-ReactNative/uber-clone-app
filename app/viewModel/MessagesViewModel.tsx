@@ -1,10 +1,8 @@
 import React from 'react';
-import MessagesScreen from '../views/message';
+import {NavigationProp} from '../models';
+import MessagesScreen from '../views/message/MessagesScreen';
 
-interface MessagesViewModelprops {
-  navigation: any;
-}
-const MessagesViewModel = (props: MessagesViewModelprops) => {
+const MessagesViewModel = (props: NavigationProp) => {
   const {navigation} = props;
 
   return (

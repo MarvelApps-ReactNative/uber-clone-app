@@ -1,14 +1,14 @@
 import React from 'react';
 import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
-import {Seperater} from '../../components';
-import {AnimationType, buttons, Icon, ScreenConstent} from '../../config';
-import {rideInfoDataType} from '../../models';
+import {Seperator} from '../../components';
+import {AnimationType, buttons, Icon, ScreenConstant} from '../../config';
+import {RideInfoDataType} from '../../models';
 import LottieView from 'lottie-react-native';
 import styles from './style';
 
 interface input {
   setItemIndex: any;
-  rideInfo: rideInfoDataType;
+  rideInfo: RideInfoDataType;
   formate_time: string;
   PaymentMethod: any;
   GotoNextScreen: any;
@@ -21,9 +21,9 @@ const ConfirmScreen = (props: input) => {
     <SafeAreaView style={styles.subSecondContainer}>
       <View style={styles.header} />
       <Text style={styles.headingText}>
-        {ScreenConstent.confirmRide.CONNECTING_YOU_TO_DRIVER}
+        {ScreenConstant.confirmRide.CONNECTING_YOU_TO_DRIVER}
       </Text>
-      <Seperater />
+      <Seperator />
       <View style={styles.progressIndicatorContainer}>
         <LottieView
           source={AnimationType.CAR_LOADING}
@@ -38,10 +38,10 @@ const ConfirmScreen = (props: input) => {
           autoPlay
         />
         <Text style={styles.addressText}>
-          {ScreenConstent.confirmRide.DROPOFF_BY} {formate_time}
+          {ScreenConstant.confirmRide.DROPOFF_BY} {formate_time}
         </Text>
       </View>
-      <Seperater />
+      <Seperator />
       <View style={styles.flexDirection}>
         <View style={styles.textContainer}>
           <Image source={Icon.LOCATION} style={styles.smallIcon} />
@@ -49,11 +49,11 @@ const ConfirmScreen = (props: input) => {
         </View>
         <TouchableOpacity>
           <Text style={styles.listButtonText}>
-            {ScreenConstent.confirmRide.ADD_OR_CHANGE}
+            {ScreenConstant.confirmRide.ADD_OR_CHANGE}
           </Text>
         </TouchableOpacity>
       </View>
-      <Seperater />
+      <Seperator />
       <View style={styles.flexDirection}>
         <View style={styles.textContainer}>
           <Image source={Icon.USER} style={styles.smallIcon} />
@@ -61,11 +61,11 @@ const ConfirmScreen = (props: input) => {
         </View>
         <TouchableOpacity onPress={GotoNextScreen}>
           <Text style={styles.listButtonText}>
-            {ScreenConstent.confirmRide.SWITCH}
+            {ScreenConstant.confirmRide.SWITCH}
           </Text>
         </TouchableOpacity>
       </View>
-      <Seperater />
+      <Seperator />
       <TouchableOpacity>
         <Text style={styles.headingText}>{buttons.CANCEL}</Text>
       </TouchableOpacity>

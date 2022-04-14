@@ -1,7 +1,7 @@
 import React from 'react';
 import {Modal, Text, TouchableOpacity, View} from 'react-native';
 import {signOut} from '../../common/GoogleLogin';
-import {buttons, ScreenConstent, Screens} from '../../config';
+import {buttons, ScreenConstant, Screens} from '../../config';
 import styles from './style';
 
 interface SettingModalprops {
@@ -23,10 +23,10 @@ const SettingModal = (props: SettingModalprops) => {
       <View style={styles.modalContainer}>
         <View style={styles.subModalContainer}>
           <Text style={styles.modalMessageText}>
-            {ScreenConstent.settings.DO_YOU_WANT_TO_SIGNOUT}
+            {ScreenConstant.settings.DO_YOU_WANT_TO_SIGNOUT}
           </Text>
           <Text style={styles.staySignedText}>
-            {ScreenConstent.settings.STAY_SIGNED}
+            {ScreenConstant.settings.STAY_SIGNED}
           </Text>
           <TouchableOpacity
             style={styles.button}

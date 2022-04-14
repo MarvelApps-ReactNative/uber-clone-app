@@ -1,13 +1,13 @@
 import React from 'react';
 import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
-import {Icon, ScreenConstent, Screens} from '../../config';
+import {Icon, ScreenConstant} from '../../config';
 import styles from './style';
 
 interface ChooseRideprops {
   navigation: any;
   PaymentOptionScreen: () => any;
 }
-const ChooseRide = (props: ChooseRideprops) => {
+const ChooseRideScreen = (props: ChooseRideprops) => {
   const {navigation, PaymentOptionScreen} = props;
 
   return (
@@ -17,7 +17,7 @@ const ChooseRide = (props: ChooseRideprops) => {
           <Image source={Icon.DOWN} style={styles.headerIcon} />
         </TouchableOpacity>
         <Text style={styles.headerText}>
-          {ScreenConstent.chooseRide.CHOOSE_A_RIDE}
+          {ScreenConstant.chooseRide.CHOOSE_A_RIDE}
         </Text>
       </View>
       <View style={styles.flex}>
@@ -26,19 +26,19 @@ const ChooseRide = (props: ChooseRideprops) => {
             <Image source={Icon.CAR} style={styles.carIcon} />
             <View>
               <Text style={styles.buttonText}>
-                {ScreenConstent.chooseRide.UBER_GO}
+                {ScreenConstant.chooseRide.UBER_GO}
               </Text>
               <Text style={styles.buttonSubText}>
-                {ScreenConstent.chooseRide.TIME}
+                {ScreenConstant.chooseRide.TIME}
               </Text>
             </View>
           </View>
           <View>
             <Text style={styles.buttonText}>
-              ${ScreenConstent.chooseRide.AMOUNT}
+              ${ScreenConstant.chooseRide.AMOUNT}
             </Text>
             <Text style={styles.buttonSubText}>
-              {ScreenConstent.chooseRide.NEXT_AMOUNT}
+              {ScreenConstant.chooseRide.NEXT_AMOUNT}
             </Text>
           </View>
         </TouchableOpacity>
@@ -50,7 +50,7 @@ const ChooseRide = (props: ChooseRideprops) => {
           <View style={styles.imageTextContainer}>
             <Image source={Icon.CASH} style={styles.moneyIcon} />
             <Text style={styles.paymentButtonText}>
-              {ScreenConstent.chooseRide.CASH}
+              {ScreenConstant.chooseRide.CASH}
             </Text>
           </View>
           <Image source={Icon.RIGHTARROW} style={styles.moneyIcon} />
@@ -60,4 +60,4 @@ const ChooseRide = (props: ChooseRideprops) => {
   );
 };
 
-export default ChooseRide;
+export default ChooseRideScreen;

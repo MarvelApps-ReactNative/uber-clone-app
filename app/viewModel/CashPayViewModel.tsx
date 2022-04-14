@@ -1,14 +1,12 @@
 import React from 'react';
-import CashPay from '../views/cashPay';
+import {NavigationProp} from '../models';
+import CashPayScreen from '../views/cashPay/CashPayScreen';
 
-interface CashPayViewModelprops {
-  navigation: any;
-}
-const CashPayViewModel = (props: CashPayViewModelprops) => {
+const CashPayViewModel = (props: NavigationProp) => {
   const {navigation} = props;
 
   return (
-    <CashPay
+    <CashPayScreen
       {...{
         navigation,
       }}

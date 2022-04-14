@@ -2,11 +2,13 @@ import AccountDetails from './AccountDetails';
 import {
   LocationDataType,
   CurrentLocationDataType,
-  rideInfoDataType,
+  RideInfoDataType,
 } from './LocationDataType';
+import NavigationProp from './NavigationDataType';
 export type {
   AccountDetails,
   LocationDataType,
   CurrentLocationDataType,
-  rideInfoDataType,
+  RideInfoDataType,
+  NavigationProp
 };

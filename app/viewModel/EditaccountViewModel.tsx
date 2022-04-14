@@ -10,7 +10,7 @@ import {
   setProfileImage,
 } from '../redux/actions';
 import { editAccountFields } from '../config';
-import EditAccount from '../views/editAccount';
+import EditAccountScreen from '../views/editAccount/EditAccountScreen';
 
 const EditAccountViewModel = ({navigation}: any) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -79,7 +79,7 @@ const EditAccountViewModel = ({navigation}: any) => {
   };
 
   return (
-    <EditAccount
+    <EditAccountScreen
       {...{
         navigation,
         modalVisible,

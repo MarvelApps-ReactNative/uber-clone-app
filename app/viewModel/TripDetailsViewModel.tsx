@@ -4,7 +4,7 @@ import initialCoordinates from '../config/dummyData/Mapdata';
 import Geolocation from '@react-native-community/geolocation';
 import {LocationDataType} from '../models';
 import tripDetails from '../config/dummyData/TripDetails';
-import TripDetails from '../views/tripDetails';
+import TripDetailScreen from '../views/tripDetails/TripDetailScreen';
 
 const TripDetailsViewModel = () => {
   const LocationData = useRef<LocationDataType>(initialCoordinates);
@@ -37,7 +37,7 @@ const TripDetailsViewModel = () => {
   }, []);
 
   return (
-    <TripDetails
+    <TripDetailScreen
       {...{
         LocationData,
         mapRef,

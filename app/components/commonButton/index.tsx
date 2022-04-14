@@ -7,7 +7,7 @@ interface Buttonprops {
   onPress: any;
 }
 
-export default function Abutton(props: Buttonprops) {
+const CommonButton=(props: Buttonprops)=> {
   const {title, onPress} = props;
   return (
     <View>
@@ -17,3 +17,5 @@ export default function Abutton(props: Buttonprops) {
     </View>
   );
 }
+
+export default CommonButton

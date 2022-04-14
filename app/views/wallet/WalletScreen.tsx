@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {buttons, Icon, ScreenConstent} from '../../config';
+import {buttons, Icon, ScreenConstant} from '../../config';
 
 import styles from './style';
 
@@ -16,7 +16,7 @@ interface Walletprops {
   onPressGoBack: () => any;
   onPress: () => any;
 }
-const Wallet = (props: Walletprops) => {
+const WalletScreen = (props: Walletprops) => {
   const {paymentsOption, onPressGoBack, onPress} = props;
 
   return (
@@ -24,13 +24,13 @@ const Wallet = (props: Walletprops) => {
       <TouchableOpacity onPress={onPressGoBack}>
         <Image source={Icon.BACK} style={styles.backIcon} />
       </TouchableOpacity>
-      <Text style={styles.nameText}>{ScreenConstent.wallet.NAME}</Text>
+      <Text style={styles.nameText}>{ScreenConstant.wallet.NAME}</Text>
 
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollViewContainer}>
         <View style={styles.cardContainer}>
-          <Text style={styles.titleText}>{ScreenConstent.wallet.UBERCASH}</Text>
+          <Text style={styles.titleText}>{ScreenConstant.wallet.UBERCASH}</Text>
           <View style={styles.textContainer}>
             <Text style={styles.cashText}>${paymentsOption.cash}</Text>
             <Image source={Icon.RIGHTARROW} style={styles.icon} />
@@ -45,7 +45,7 @@ const Wallet = (props: Walletprops) => {
             <Text style={styles.sendGiftText}>{buttons.SEND_A_GIFT}</Text>
             <View style={styles.textContainer}>
               <Text style={styles.descriptionText}>
-                {ScreenConstent.wallet.DESCRIPTION}
+                {ScreenConstant.wallet.DESCRIPTION}
               </Text>
               <Image source={Icon.GIFTBOX} style={styles.icon} />
             </View>
@@ -72,14 +72,14 @@ const Wallet = (props: Walletprops) => {
 
         <TouchableOpacity onPress={onPress}>
           <Text style={styles.addPaymentText}>
-            {ScreenConstent.wallet.ADD_PAYMENT}
+            {ScreenConstant.wallet.ADD_PAYMENT}
           </Text>
         </TouchableOpacity>
         <View style={styles.seperator} />
 
         <View>
           <Text style={styles.titleText}>
-            {ScreenConstent.wallet.RIDE_PROFILES}
+            {ScreenConstant.wallet.RIDE_PROFILES}
           </Text>
           <View>
             <TouchableOpacity style={styles.buttonContainer}>
@@ -87,7 +87,7 @@ const Wallet = (props: Walletprops) => {
                 <Image source={Icon.DRIVER} style={styles.driverIcon} />
               </View>
               <Text style={styles.titleText}>
-                {ScreenConstent.wallet.PERSONAL}
+                {ScreenConstant.wallet.PERSONAL}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer}>
@@ -96,22 +96,22 @@ const Wallet = (props: Walletprops) => {
               </View>
               <View>
                 <Text style={styles.startUberText}>
-                  {ScreenConstent.wallet.START_UBER}
+                  {ScreenConstant.wallet.START_UBER}
                 </Text>
                 <Text style={styles.turnOnText}>
-                  {ScreenConstent.wallet.TURN_ON}
+                  {ScreenConstant.wallet.TURN_ON}
                 </Text>
               </View>
             </TouchableOpacity>
           </View>
           <View style={styles.seperator} />
-          <Text style={styles.titleText}>{ScreenConstent.wallet.VOUCHERS}</Text>
+          <Text style={styles.titleText}>{ScreenConstant.wallet.VOUCHERS}</Text>
           <TouchableOpacity style={styles.buttonContainer}>
             <View style={styles.imageContainer}>
               <Image source={Icon.DRIVER} style={styles.driverIcon} />
             </View>
             <Text style={styles.titleText}>
-              {ScreenConstent.wallet.VOUCHERS}
+              {ScreenConstant.wallet.VOUCHERS}
             </Text>
           </TouchableOpacity>
         </View>
@@ -120,4 +120,4 @@ const Wallet = (props: Walletprops) => {
   );
 };
 
-export default Wallet;
+export default WalletScreen;

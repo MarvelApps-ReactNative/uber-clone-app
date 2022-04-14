@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Favorites, settingButtons} from '../config/dummyData/AccountSettings';
-import SettingScreen from '../views/setting';
+import {NavigationProp} from '../models';
+import SettingScreen from '../views/setting/SettingScreen';
 
-interface SettingsViewModelprops {
-  navigation: any;
-}
-const SettingsViewModel = (props: SettingsViewModelprops) => {
+const SettingsViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   const [ModalVisible, setModalVisible] = useState(false);
   const profileUri = useSelector((state: any) => state.profileImage);

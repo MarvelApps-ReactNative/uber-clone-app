@@ -25,7 +25,7 @@ const ActionsConstants = {
   //Payment Options Actions
   SET_CASH: 'SET_CASH',
   SET_PAYMENT_METHODS: 'SET_PAYMENT_METHODS',
-  SET_PATMENT_ICON: 'SET_PAYMENT_ICONS',
+  SET_PAYMENT_ICON: 'SET_PAYMENT_ICONS',
 };
 
 export default ActionsConstants;

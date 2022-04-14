@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Header, Seperater, AccountModal} from '../../components';
-import {Icon, ScreenConstent} from '../../config';
+import {Header, Seperator, AccountModal} from '../../components';
+import {Icon, ScreenConstant} from '../../config';
 import {AccountDetails} from '../../models';
 import CountryPicker from 'react-native-country-picker-modal';
 import styles from './style';
@@ -32,7 +32,7 @@ interface EditAccountprops {
     verify: boolean;
   }[];
 }
-const EditAccount = (props: EditAccountprops) => {
+const EditAccountScreen = (props: EditAccountprops) => {
   const {
     navigation,
     profileUri,
@@ -54,7 +54,7 @@ const EditAccount = (props: EditAccountprops) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.mainContainer}>
-        <Header Title={ScreenConstent.editAccount.EDIT_ACCOUNT} />
+        <Header Title={ScreenConstant.editAccount.EDIT_ACCOUNT} />
         <ScrollView
           showsVerticalScrollIndicator={false}
           style={styles.secondContainer}>
@@ -69,7 +69,7 @@ const EditAccount = (props: EditAccountprops) => {
               </View>
             </TouchableOpacity>
           </View>
-          <Seperater />
+          <Seperator />
           <View style={styles.subConatiner}>
             {editAccountFields.map((item, index) => {
               return (
@@ -109,7 +109,7 @@ const EditAccount = (props: EditAccountprops) => {
                     </View>
                     {item.verify && (
                       <Text style={styles.verificationText}>
-                        {ScreenConstent.editAccount.VERIFIED}
+                        {ScreenConstant.editAccount.VERIFIED}
                       </Text>
                     )}
                   </TouchableOpacity>
@@ -122,22 +122,22 @@ const EditAccount = (props: EditAccountprops) => {
               <View style={styles.footerItemSub}>
                 <Image source={Icon.GOOGLE} style={styles.googleImage} />
                 <Text style={styles.footerItemText}>
-                  {ScreenConstent.editAccount.GOOGLE}
+                  {ScreenConstant.editAccount.GOOGLE}
                 </Text>
               </View>
               <Text style={styles.footerConnectionText}>
-                {ScreenConstent.editAccount.CONNECTED}
+                {ScreenConstant.editAccount.CONNECTED}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.footerItemContainer}>
               <View style={styles.footerItemSub}>
                 <Image source={Icon.FACEBOOK} style={styles.googleImage} />
                 <Text style={styles.footerItemText}>
-                  {ScreenConstent.editAccount.FACEBOOK}
+                  {ScreenConstant.editAccount.FACEBOOK}
                 </Text>
               </View>
               <Text style={styles.footerConnectionText}>
-                {ScreenConstent.editAccount.CONNECTED}
+                {ScreenConstant.editAccount.CONNECTED}
               </Text>
             </TouchableOpacity>
           </View>
@@ -159,4 +159,4 @@ const EditAccount = (props: EditAccountprops) => {
   );
 };
 
-export default EditAccount;
+export default EditAccountScreen;

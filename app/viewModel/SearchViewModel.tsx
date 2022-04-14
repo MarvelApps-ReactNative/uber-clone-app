@@ -4,13 +4,12 @@ import {useDispatch, useSelector} from 'react-redux';
 import Geolocation from '@react-native-community/geolocation';
 import {CurrentLocationDataType, LocationDataType} from '../models';
 import {sendRequest} from '../network';
-import SearchScreen from '../views/searchDestination';
 import {
   api,
   APIKEY,
   Icon,
   initialCoordinates,
-  ScreenConstent,
+  ScreenConstant,
   Screens,
 } from '../config';
 import {
@@ -21,6 +20,7 @@ import {
   setOriginName,
   setTimeScheduleRide,
 } from '../redux/actions';
+import SearchScreen from '../views/searchDestination/SearchScreen';
 
 const SearchViewModel = ({navigation}: any) => {
   const [originText, setOriginText] = useState('');
@@ -148,8 +148,8 @@ const SearchViewModel = ({navigation}: any) => {
 
   const onTouchEnd = async () => {
     isFocus
-      ? setOriginText(ScreenConstent.searchDestination.LOADING)
-      : setDestinationText(ScreenConstent.searchDestination.LOADING);
+      ? setOriginText(ScreenConstant.searchDestination.LOADING)
+      : setDestinationText(ScreenConstant.searchDestination.LOADING);
     let url = `${api.GOOGLE_NAME_BY_LAT_LNG}${regionChangeData.current.latitude},
     ${regionChangeData.current.longitude}&key=${APIKEY}`;
     let response = await sendRequest(url);

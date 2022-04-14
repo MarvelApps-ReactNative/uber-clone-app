@@ -28,7 +28,7 @@ const profileList = [
   },
 ];
 
-const ScreenConstent = {
+const ScreenConstant = {
   wallet: {
     NAME: 'Wallet',
     UBERCASH: 'Uber Cash',
@@ -63,7 +63,7 @@ const ScreenConstent = {
   },
   messagesScreen: {
     MESSAGES: 'Messages',
-    COUPON: '20% off on first %',
+    COUPON: '20% off on first ride',
     OFFER_TEXT: 'Offer automatically applied for limited period only',
   },
   settings: {
@@ -82,6 +82,7 @@ const ScreenConstent = {
       'If you continue, you may recive an sms for varification message and datarate may apply',
     OR: 'or',
     MOBILE_NUMBER: 'Mobile Number',
+    EMAIL: 'email',
   },
   paymentOptions: {
     PAYMENT_OPTIONS: 'Payment Options',
@@ -92,6 +93,8 @@ const ScreenConstent = {
   },
   addPayment: {
     ADD_PAYMENT: 'Add Payment',
+    ICON: 'icon',
+    LABEL: 'label',
   },
   addCard: {
     ADD_CARD: 'Add Card',
@@ -123,7 +126,7 @@ const ScreenConstent = {
     LOCATION: 'Current Location',
     LOADING: 'Loading...',
   },
-  serachReasult: {
+  serachResult: {
     PROMOTION_TEXT: '20% promotion applied',
   },
   confirmRide: {
@@ -151,6 +154,8 @@ const ScreenConstent = {
     RIDING_WITH_SOMEONE: 'Riding with someone?',
     AMOUNT: '261.91',
     PAYTM: 'Paytm',
+    NEW_DELHI_RAILWAY_STATION: 'New Delhi Railway Station',
+    DROPOFF: '6:32pm dropoff',
   },
   startTrip: {
     HEADING_TO: 'Heading to',
@@ -214,6 +219,7 @@ const constants = {
     'Sorry for inconvenience we are unable to provide our service here ',
   COUNTRY: 'CountryList',
   UBER: 'Uber',
+  VERSION: 'v1.0.00',
 };
 
 const onboarding = {
@@ -232,7 +238,7 @@ const APIKEY = 'AIzaSyD907Ej8YHUdjWWqhkW76sT-ALJzU0btqY';
 
 export {
   profileList,
-  ScreenConstent,
+  ScreenConstant,
   buttons,
   constants,
   APIKEY,

@@ -1,22 +1,20 @@
 import React from 'react';
 import {Image, SafeAreaView, Text, TextInput, View} from 'react-native';
-import {Abutton, Header} from '../../components';
-import {buttons, Icon, ScreenConstent} from '../../config';
+import {CommonButton, Header} from '../../components';
+import {buttons, Icon, ScreenConstant} from '../../config';
+import {NavigationProp} from '../../models';
 import styles from './style';
 
-interface AddCardScreeenprops {
-  navigation: any;
-}
-const AddCardScreeen = (props: AddCardScreeenprops) => {
+const AddCardScreeen = (props: NavigationProp) => {
   const {navigation} = props;
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Header Title={ScreenConstent.addCard.ADD_CARD} />
+      <Header Title={ScreenConstant.addCard.ADD_CARD} />
       <View style={styles.secondContainer}>
         <View>
           <Text style={styles.numberText}>
-            {ScreenConstent.addCard.CARD_NUMBER}
+            {ScreenConstant.addCard.CARD_NUMBER}
           </Text>
           <View style={styles.inputContainer}>
             <Image source={Icon.CREDITCARD} style={styles.icons} />
@@ -27,7 +25,7 @@ const AddCardScreeen = (props: AddCardScreeenprops) => {
           <View style={styles.inputBoxContainer}>
             <View style={styles.input}>
               <Text style={styles.numberText}>
-                {ScreenConstent.addCard.CARD_NUMBER}
+                {ScreenConstant.addCard.CARD_NUMBER}
               </Text>
               <View style={styles.inputContainer}>
                 <TextInput style={styles.cardInput} />
@@ -36,7 +34,7 @@ const AddCardScreeen = (props: AddCardScreeenprops) => {
             </View>
             <View style={styles.input}>
               <Text style={styles.numberText}>
-                {ScreenConstent.addCard.CARD_NUMBER}
+                {ScreenConstant.addCard.CARD_NUMBER}
               </Text>
               <View style={styles.inputContainer}>
                 <TextInput style={styles.cardInput} />
@@ -46,7 +44,7 @@ const AddCardScreeen = (props: AddCardScreeenprops) => {
           </View>
 
           <Text style={styles.numberText}>
-            {ScreenConstent.addCard.COUNTRY}
+            {ScreenConstant.addCard.COUNTRY}
           </Text>
 
           <View style={styles.inputContainer}>
@@ -55,14 +53,14 @@ const AddCardScreeen = (props: AddCardScreeenprops) => {
             <Image source={Icon.DOWN} style={styles.icons} />
           </View>
           <Text style={styles.numberText}>
-            {ScreenConstent.addCard.NICK_NAME}
+            {ScreenConstant.addCard.NICK_NAME}
           </Text>
 
           <View style={styles.inputContainer}>
             <TextInput style={styles.cardNumberInput} />
           </View>
         </View>
-        <Abutton title={buttons.NEXT} onPress={undefined} />
+        <CommonButton title={buttons.NEXT} onPress={undefined} />
       </View>
     </SafeAreaView>
   );

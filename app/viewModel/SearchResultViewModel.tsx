@@ -4,11 +4,8 @@ import {useSelector} from 'react-redux';
 import {convertMinsToHrsMins, getCarImage} from '../common';
 import {Screens} from '../config';
 import {CurrentLocationDataType} from '../models';
-import SearchResult from '../views/searchResult';
-
-interface SearchResultViewModelprops {
-  navigation: any;
-}
+import {NavigationProp} from '../models';
+import SearchResultScreen from '../views/searchResult/SearchResultScreen';
 
 const apidata = {
   coordinates: [],
@@ -27,7 +24,7 @@ interface rideInfoType {
   };
 }
 
-const SearchResultViewModel = (props: SearchResultViewModelprops) => {
+const SearchResultViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   const rideInfo = useSelector((state: any) => state.rideInfo);
   const paymentsOption = useSelector((state: any) => state.paymentsOption);
@@ -62,7 +59,7 @@ const SearchResultViewModel = (props: SearchResultViewModelprops) => {
   }, []);
 
   return (
-    <SearchResult
+    <SearchResultScreen
       {...{
         navigation,
         getCarImage,
