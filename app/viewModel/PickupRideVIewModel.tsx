@@ -5,6 +5,8 @@ import {RideInfoDataType} from '../models';
 import {RideInformation} from '../config/dummyData/RiderInformation';
 import {BottomSheetModal} from '@gorhom/bottom-sheet';
 import {NavigationProp} from '../models';
+import {ScreenConstant} from '../config';
+import {onShare} from '../common';
 import PickRideScreen from '../views/pickupRide/PickRideScreen';
 
 type rideInfoType = {
@@ -15,12 +17,13 @@ const PickupRideViewModel = (props: NavigationProp) => {
   const {navigation} = props;
   const rideInfostate = useSelector((state: rideInfoType) => state.rideInfo);
   const paymentsOption = useSelector((state: any) => state.paymentsOption);
+  const destination = useSelector((state: any) => state.rideInfo);
 
   const [rideInfo, setRideInfo] = useState(RideInformation);
 
   const firstBottomModalRef = useRef<BottomSheetModal>(null);
   const [bottomIndex, setBottomIndex] = useState<number>(0);
-  const snapPointsFirst = useMemo(() => ['40%', '80%'], []);
+  const snapPointsFirst = useMemo(() => ['40%', '97%'], []);
 
   const handleSheetChanges = useCallback((index: number) => {
     setBottomIndex(index);
@@ -44,6 +47,9 @@ const PickupRideViewModel = (props: NavigationProp) => {
         bottomIndex,
         snapPointsFirst,
         paymentsOption,
+        destinationText: destination.destinationName,
+        SearchScreen: () => navigation.replace(Screens.SearchViewModel),
+        ShareMessage: () => onShare(ScreenConstant.pickupRide.SHARE_MESSAGE),
       }}
     />
   );

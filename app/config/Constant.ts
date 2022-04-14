@@ -156,6 +156,7 @@ const ScreenConstant = {
     PAYTM: 'Paytm',
     NEW_DELHI_RAILWAY_STATION: 'New Delhi Railway Station',
     DROPOFF: '6:32pm dropoff',
+    SHARE_MESSAGE: 'This is Share Functionality and it in Progess!',
   },
   startTrip: {
     HEADING_TO: 'Heading to',

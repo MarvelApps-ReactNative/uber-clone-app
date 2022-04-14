@@ -35,6 +35,9 @@ interface PickRideScreenprops {
   bottomIndex: number;
   firstBottomModalRef: React.RefObject<BottomSheetModalMethods>;
   paymentsOption: any;
+  destinationText: any;
+  SearchScreen: () => any;
+  ShareMessage: () => Promise<void>;
 }
 const PickRideScreen = (props: PickRideScreenprops) => {
   const {
@@ -48,6 +51,9 @@ const PickRideScreen = (props: PickRideScreenprops) => {
     firstBottomModalRef,
     snapPointsFirst,
     paymentsOption,
+    destinationText,
+    SearchScreen,
+    ShareMessage,
   } = props;
 
   return (
@@ -108,7 +114,7 @@ const PickRideScreen = (props: PickRideScreenprops) => {
             snapPoints={snapPointsFirst}
             enablePanDownToClose={false}
             enableDismissOnClose={false}
-            enableContentPanningGesture={false}
+            enableContentPanningGesture={true}
             enableHandlePanningGesture={true}
             onChange={handleSheetChanges}>
             <View style={styles.subSecondMainContainer}>
@@ -175,15 +181,15 @@ const PickRideScreen = (props: PickRideScreenprops) => {
                   <View style={styles.textContainer}>
                     <Image source={Icon.LOCATION} style={styles.listItemIcon} />
                     <View>
-                      <Text style={styles.paragraph}>
-                        {ScreenConstant.pickupRide.NEW_DELHI_RAILWAY_STATION}
+                      <Text style={styles.destinationText} numberOfLines={2}>
+                        {destinationText}
                       </Text>
                       <Text style={styles.textColor}>
                         {ScreenConstant.pickupRide.DROPOFF}
                       </Text>
                     </View>
                   </View>
-                  <TouchableOpacity style={styles.align}>
+                  <TouchableOpacity style={styles.align} onPress={SearchScreen}>
                     <Text style={styles.buttonText}>
                       {buttons.ADD_OR_CHANGE}
                     </Text>
@@ -234,7 +240,7 @@ const PickRideScreen = (props: PickRideScreenprops) => {
                       {ScreenConstant.pickupRide.SHARE_TRIP_STATUS}
                     </Text>
                   </View>
-                  <TouchableOpacity style={styles.align}>
+                  <TouchableOpacity style={styles.align} onPress={ShareMessage}>
                     <Text style={styles.buttonText}>{buttons.SHARE}</Text>
                   </TouchableOpacity>
                 </View>

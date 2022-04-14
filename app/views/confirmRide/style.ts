@@ -41,6 +41,13 @@ const styles = StyleSheet.create({
     color: COLORS.black,
     marginVertical: 10,
   },
+  destinationText: {
+    ...Font.body,
+    fontSize: 15,
+    color: COLORS.black,
+    marginVertical: 10,
+    width: 200,
+  },
   listButtonText: {
     ...Font.body,
     fontSize: 15,

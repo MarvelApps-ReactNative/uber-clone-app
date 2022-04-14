@@ -136,7 +136,13 @@ const styles = StyleSheet.create({
   paragraph: {
     fontSize: 16,
     color: COLORS.black,
-    fontWeight: '600',
+    ...Font.body,
+  },
+  destinationText:{
+    fontSize: 16,
+    color: COLORS.black,
+    width: 200,
+    ...Font.body,
   },
   buttonText: {
     fontSize: 15,

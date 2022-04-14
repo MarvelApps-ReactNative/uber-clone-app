@@ -81,6 +81,8 @@ const ConfirmRideViewModel = (props: ConfirmRideViewModelprops) => {
               PaymentMethod,
               GotoNextScreen: () =>
                 navigation.navigate(Screens.PaymentOptionsViewModel),
+              SearchScreen: () => navigation.replace(Screens.SearchViewModel),
+              HomeScreen: () => navigation.navigate(Screens.HomeViewModel),
             }}
           />
         );

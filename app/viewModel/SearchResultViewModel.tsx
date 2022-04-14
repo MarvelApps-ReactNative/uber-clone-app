@@ -3,7 +3,6 @@ import {BottomSheetModal} from '@gorhom/bottom-sheet';
 import {useSelector} from 'react-redux';
 import {convertMinsToHrsMins, getCarImage} from '../common';
 import {Screens} from '../config';
-import {CurrentLocationDataType} from '../models';
 import {NavigationProp} from '../models';
 import SearchResultScreen from '../views/searchResult/SearchResultScreen';
 
@@ -14,15 +13,6 @@ const apidata = {
   fares: [undefined],
   waypointOrder: [[]],
 };
-
-interface rideInfoType {
-  rideInfo: {
-    destinationCoord: CurrentLocationDataType;
-    destinationName: string;
-    originCoord: CurrentLocationDataType;
-    originName: string;
-  };
-}
 
 const SearchResultViewModel = (props: NavigationProp) => {
   const {navigation} = props;

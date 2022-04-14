@@ -12,11 +12,20 @@ interface input {
   formate_time: string;
   PaymentMethod: any;
   GotoNextScreen: any;
+  SearchScreen: () => any;
+  HomeScreen: () => any;
 }
 
 const ConfirmScreen = (props: input) => {
-  const {setItemIndex, rideInfo, formate_time, PaymentMethod, GotoNextScreen} =
-    props;
+  const {
+    setItemIndex,
+    rideInfo,
+    formate_time,
+    PaymentMethod,
+    GotoNextScreen,
+    SearchScreen,
+    HomeScreen,
+  } = props;
   return (
     <SafeAreaView style={styles.subSecondContainer}>
       <View style={styles.header} />
@@ -45,9 +54,11 @@ const ConfirmScreen = (props: input) => {
       <View style={styles.flexDirection}>
         <View style={styles.textContainer}>
           <Image source={Icon.LOCATION} style={styles.smallIcon} />
-          <Text style={styles.addressText}>{rideInfo.destinationName}</Text>
+          <Text style={styles.destinationText} numberOfLines={2}>
+            {rideInfo.destinationName}
+          </Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={SearchScreen}>
           <Text style={styles.listButtonText}>
             {ScreenConstant.confirmRide.ADD_OR_CHANGE}
           </Text>
@@ -66,7 +77,7 @@ const ConfirmScreen = (props: input) => {
         </TouchableOpacity>
       </View>
       <Seperator />
-      <TouchableOpacity>
+      <TouchableOpacity onPress={HomeScreen}>
         <Text style={styles.headingText}>{buttons.CANCEL}</Text>
       </TouchableOpacity>
     </SafeAreaView>
